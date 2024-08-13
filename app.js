@@ -10,7 +10,7 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
-const MongoStore = require('connect-mongo');
+const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -30,18 +30,17 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
-
 const store = MongoStore.create({
-  mongoUrl : DB_URL,
-  crypto : {
-    secret : process.env.SECRET,
+  mongoUrl: DB_URL,
+  crypto: {
+    secret: process.env.SECRET,
   },
-  touchAfter : 24 * 3600,
+  touchAfter: 24 * 3600,
 });
 
-store.on("error",() => {
-  console.log("ERROR in MONGO SESSION STORE",err);
-})
+store.on("error", () => {
+  console.log("ERROR in MONGO SESSION STORE", err);
+});
 
 const sessionOption = {
   store,
@@ -80,6 +79,10 @@ app.use((req, res, next) => {
   res.locals.error = req.flash("error");
   res.locals.currUser = req.user;
   next();
+});
+
+app.get("/", (req, res) => {
+  res.redirect("/listings");
 });
 
 app.use("/listings", listingRouter);
