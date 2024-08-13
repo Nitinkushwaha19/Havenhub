@@ -1,0 +1,271 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: #fff;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+  margin-right: 0.5rem;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info {
+  height: 6rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.f-info-social,
+.f-info-links,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-social i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+/* card */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.listing-details {
+  width : 40rem;
+  height: 90%;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-top {
+  width: 100% !important;
+  border-radius: 1rem !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-body p {
+  font-weight: 400;
+}
+
+.listing-links {
+  text-decoration: none !important;
+}
+
+/* card effect */
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: #fff;
+}
+
+/* New page */
+
+.add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Edit page */
+
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Show page */
+
+.listing-section {
+  display: flex;
+  margin: 2rem 0 4rem 0 ;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.4rem;
+
+}
+
+.listing-image {
+  height: 70vh;
+  margin: 0 3rem 3rem 0;
+  width: 40%;
+
+
+}
+
+.listing-image img {
+  height: 100%;
+}
+
+
+.show-img {
+  height: 40vh;
+}
+
+.btns {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.btns a {
+  margin: 0;
+  width: 4rem;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.review-card-p {
+  margin-bottom: 0.2rem !important;
+  font-size: 0.8rem;
+}
+
+/* Map section */
+#map {
+  height: 30rem;
+  width: 100%;
+}
+.mapBox {
+  width: 70%;
+  margin-bottom: 0;
+}
+
+.listing-map-box {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  width: 35%;
+}
+
+/* Review section */
+.review-section {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.review-box-card {
+  width: 40% !important;
+  margin-bottom: 2rem ;
+}
+
+.review-comment {
+  width: 70%;
+}
+
+@media only screen and (max-width: 993px) {
+  
+  .listing-map-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mapBox {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .listing-details {
+    width: 100%;
+    height: 90%;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    width: 80%;
+    margin-bottom: 5rem;
+  }
+
+  .review-section {
+    width: 90% !important;
+    display: block !important;
+  }
+
+  .review-box-card {
+    width: 100% !important;
+    margin-bottom: 2rem ;
+  }
+  
+  .review-comment {
+    width: 90%;
+  }
+
+  .listing-section {
+    display: block;
+  }
+
+  .listing-image {
+    height: 60vh;
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .listing-image p {
+    display: none;
+  }
+
+  #map {
+    height: 20rem;
+  }
+
+}
